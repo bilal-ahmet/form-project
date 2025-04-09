@@ -3,6 +3,6 @@ const router = express.Router();
 const formController = require('../controllers/formController');
 
 router.get('/', formController.renderForm);
-router.post('submit', formController.submitForm);
+router.post('/submit', formController.handleForm);
 
 module.exports = router;

@@ -9,7 +9,7 @@ const PORT = 3000;
 // middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine' , ejs);
+app.set('view engine' , 'ejs');
 
 // routes
 app.use('/', formRoutes);
