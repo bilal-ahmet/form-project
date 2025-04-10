@@ -9,9 +9,13 @@ exports.handleForm = (req, res) => {
     console.log('gelen veriler: ', req.body);
 
     if(!username && !email){
-        res.render('index', {status: 'error'});
+        /* // ajax toast mesajını göstermek için res.json şeklinde değiştirdik
+        //res.render('index', {status: 'error'}); */
+
+        res.json({status: 'error', message: 'Lütfen formu doldurun!'});
     }
     else{
-        res.render('index', {status: 'success'});
+        /* res.render('index', {status: 'success'}); */
+        res.json({status: 'success', message: 'Form başarıyla gönderildi!'});
     }
 };
